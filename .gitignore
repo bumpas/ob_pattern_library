@@ -1,0 +1,32 @@
+## Let's ignore production css
+**/*.css
+
+## Bower Components
+bower_components
+
+## Node stuff
+node_modules
+npm-debug.log
+
+## Sublime Text project files
+*.sublime-workspace
+*.sublime-project
+
+## SASS stuff to ignore
+.sass-cache
+*.css.map
+
+## General CodeKit files to ignore
+config.codekit
+/min
+
+**/.DS_Store
+
+## Ignore procedurally generated items
+js/frontend.js
+js/frontend.min.js
+images/sprites.svg
+/index.html
+
+## Ignore build directory
+build

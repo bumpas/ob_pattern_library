@@ -1,0 +1,24 @@
+@import "pushy";
+
+.menu-btn {
+	position: fixed;
+	background-color: $lightGrey;
+	cursor: pointer;
+	left: 0;
+	text-align: center;
+	z-index: 999;
+	padding: 5%;
+	color: $black;
+	overflow: hidden;
+	@include font1;
+
+	&:after {
+		position: relative;
+		content: "MENU";
+		margin-left: 5px;
+	}
+
+	@include respond(445px) {
+		padding: 1%;
+	}
+}

@@ -1,0 +1,100 @@
+// Fonts
+
+@mixin Icons {
+  font-family: 'Icons';
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font1 {
+  font-family: 'font1', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font1--bold {
+  font-family: 'font1', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin font1--light {
+  font-family: 'font1', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@mixin font2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Responsive mixins
+
+@mixin breakpoint($class) {
+
+  @if $class == md {
+    @media (min-width: 768px) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: 992px) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: md, lg";
+  }
+}
+
+// Create responsive styles for element
+@mixin respond($resolution) {
+  @media(min-width: $resolution) {
+    @content;
+  }
+}
+
+//background html image full
+@mixin bgFull {
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  top: -50%;
+  left: -50%;
+
+    img {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      min-height: 50%;
+      min-width: 50%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+}
+
+//font size px to rem mixin
+@function rem($pxval) {
+  @return ($pxval / $em-base) * 1rem;
+}
+
+//clearfix mixin
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//hidetext mixin
+@mixin hidetext {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+}

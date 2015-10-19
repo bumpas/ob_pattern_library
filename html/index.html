@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OtterBox.com Pattern Library</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<!-- <link rel="stylesheet" href="css/frontend.css"> -->
+	<link rel="stylesheet" href="css/styles.css">
+	<script >
+		// Picture element HTML5 shiv
+		document.createElement( "picture" );
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/picturefill.min.js" async></script>
+</head>
+<body>
+
+	<nav class="pushy pushy-left">
+		<ul></ul>
+	</nav>
+
+	<div class="site-overlay"></div>
+
+	<div id="container">
+
+		<div class="menu-btn">&#9776;</div>
+
+		<header>
+			<h1>Otterbox.com <span>pattern library</span></h1>
+		</header>
+
+		@@include('colors.html')
+		@@include('typography.html')
+
+	</div>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/plugins/pushy.js"></script>
+	<script src="js/plugins/jquery.customSelect.min.js"></script>
+	<script src="js/plugins/slick.min.js"></script>
+	<script src="js/frontend.js"></script>
+
+	<script>
+		$(function(){
+			//footer custom select styles (already loaded in dmw environments)
+			$('.customSelect').customSelect();
+
+			// Auto populate offcanvas nav items
+			var nav = $('nav.pushy ul');
+			$('div#container > a').each(function(i){
+				var anchor = $(this);
+				var item = $("<a></a>");
+				item
+					.attr('href', "javascript:scrollToElement($('a[name=" + anchor.attr('name') + "]'));")
+					.text(anchor.attr('title'))
+					.wrap("<li></li>");
+				nav.append(item);
+			});
+
+			var buttonSection = $('section.buttons');
+			$('select#buttons-background').on('change', function(){
+				var value = $(this).val();
+				var pattern = /#[0-9a-fA-F]{6,6}/;
+
+				if (pattern.test(value)) {
+					// Color
+					buttonSection.css('background-color', value).css('background-image','');
+
+				} else {
+					// Image
+					buttonSection.css('background-image', 'url('+value+')').css('background-color','');
+
+				}
+			}).trigger('change');
+
+			$('select#buttons-text-color').on('change', function(){
+				buttonSection.css('color', $(this).val());
+			});
+
+			// $.get('images/sprites.svg', function(data){
+			// 	var ids = [];
+			// 	$(data).find('symbol').each(function(){
+			// 		ids.push($(this).attr('id'));
+			// 	});
+			// 	ids = ids.sort();
+			// 	var html = "";
+			// 	ids.forEach(function(id, index){
+			// 		html += "<li title='#" + id + "'><svg><use xlink:href='images/sprites.svg#" + id + "'/></svg><div>#" + id + "</div></li>";
+			// 	});
+			// 	$('section.icons ul').append(html);
+			// });
+
+		});
+
+		scrollToElement = function(element){
+			$('html,body').animate({
+				scrollTop: element.offset().top
+			});
+			$('.menu-btn').click();
+		}
+	</script>
+</body>
+</html>
