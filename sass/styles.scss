@@ -92,20 +92,19 @@ header {
 
 //sections
 
-section {
-	padding: 2rem 1rem;
-	position: relative;
-}
-
 .section__header {
 	background-color: $black;
 	width: 100%;
 	color: $white;
-	padding: 1% 2%;
-	margin-bottom: 1rem;
+	padding: 1rem;
 }
 
-.section--fluid {
+.section__wrap {
+	padding: 2rem 1rem;
+	position: relative;
+}
+
+.section__wrap--nopad {
 	padding: 0;
 }
 
