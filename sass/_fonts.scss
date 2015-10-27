@@ -24,10 +24,10 @@
 @include font-face(Icons, '../fonts/icons/icons', 400, normal);
 
 // Nudista Medium
-@include font-face(font1, '../fonts/nudista/nudista_medium', 400, normal);
+@include font-face(nudista, '../fonts/nudista/nudista_medium', 400, normal);
 
 // Nudista Bold
-@include font-face(font1, '../fonts/nudista/nudista_bold', 700, normal);
+@include font-face(nudista, '../fonts/nudista/nudista_bold', 700, normal);
 
 // Nudista Light
-@include font-face(font1, '../fonts/nudista/nudista_light', 100, normal);
+@include font-face(nudista, '../fonts/nudista/nudista_light', 100, normal);

@@ -1,36 +1,15 @@
 section.buttons {
 
-	background-size: cover;
-	background-position: center center;;
+	.section__wrap {
+		@include clearfix;
+	}
 
-	> div > div {
+	.section__wrap > div {
 		float: left;
-		margin-right: 15px;
+		padding: 2% 5%;
 	}
 
-	p {
-		margin-bottom: 20px;
-	}
-
-	.btn {
-		@include CoreSansCN-bold;
-	}
-
-	.buttonsLinks {
-		background: #efefef;
-
-		h4 {
-			padding-bottom: .5rem;
-		}
-	}
-
-	.buttons--background {
-		background: url("../images/hero-bikers.jpg") no-repeat 50% 50%;
-		background-size: cover;
-		padding: 1rem;
-
-		h4 {
-			color: $white;
-		}
+	.btns-primary {
+		background: $black;
 	}
 }

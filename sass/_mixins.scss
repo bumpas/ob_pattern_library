@@ -6,25 +6,25 @@
   font-style: normal;
 }
 
-@mixin font1 {
-  font-family: 'font1', sans-serif;
+@mixin Nudista {
+  font-family: 'Nudista', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-@mixin font1--bold {
-  font-family: 'font1', sans-serif;
+@mixin Nudista--bold {
+  font-family: 'Nudista', sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-@mixin font1--light {
-  font-family: 'font1', sans-serif;
+@mixin Nudista--light {
+  font-family: 'Nudista', sans-serif;
   font-weight: 100;
   font-style: normal;
 }
 
-@mixin font2 {
+@mixin OpenSans {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
