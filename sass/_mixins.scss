@@ -25,13 +25,13 @@
 }
 
 @mixin OpenSans {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @mixin OpenSans--bold {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
