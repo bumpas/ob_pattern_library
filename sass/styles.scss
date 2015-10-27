@@ -21,11 +21,6 @@ body {
 	color: $black;
 }
 
-*::selection {
-	color: $blue;
-	background: $darkGrey;
-}
-
 h1,h2,h3,h4,h5,h6 {
 	text-rendering: geometricPrecision;
 }
@@ -61,7 +56,7 @@ b, strong {
 }
 
 em, i {
-	font-style: oblique;
+	font-style: italic;
 }
 
 //header
