@@ -1,0 +1,44 @@
+.module h1,
+.module h2,
+.module h3,
+.module h4,
+.module h5,
+.module h6 {
+	text-rendering: geometricPrecision;
+}
+
+.module h1 {
+	@include Nudista--bold;
+	font-size: rem(60);
+	text-transform: uppercase;
+}
+
+.module h2 {
+	@include Nudista--bold;
+	font-size: rem(24);
+}
+
+.module h3 {
+	@include Nudista;
+	font-size: rem(24);
+}
+
+.module h4 {
+	@include Nudista--light;
+	font-size: rem(24);
+}
+
+.module h5 {
+	@include Nudista--bold;
+	font-size: rem(14);
+}
+
+.module b, 
+.module strong {
+	font-weight: 700;
+}
+
+.module em, 
+.module i {
+	font-style: italic;
+}

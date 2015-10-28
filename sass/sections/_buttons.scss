@@ -4,12 +4,18 @@ section.buttons {
 		@include clearfix;
 	}
 
-	.section__wrap > div {
+	.btns {
 		float: left;
 		padding: 2% 5%;
-	}
 
-	.btns-primary {
-		background: $black;
+		&--bg {
+			background: $black;
+		}
+
+		&--pic {
+			background-image: url('http://unsplash.it/500?image=60&blur');
+			background-size: cover;
+			background-position: 50% 50%;
+		}
 	}
 }

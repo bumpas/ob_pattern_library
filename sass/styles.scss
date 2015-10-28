@@ -21,44 +21,6 @@ body {
 	color: $black;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	text-rendering: geometricPrecision;
-}
-
-h1 {
-	@include Nudista--bold;
-	font-size: rem(60);
-	text-transform: uppercase;
-}
-
-h2 {
-	@include Nudista--bold;
-	font-size: rem(24);
-}
-
-h3 {
-	@include Nudista;
-	font-size: rem(24);
-}
-
-h4 {
-	@include Nudista--light;
-	font-size: rem(24);
-}
-
-h5 {
-	@include Nudista--bold;
-	font-size: rem(14);
-}
-
-b, strong {
-	font-weight: 700;
-}
-
-em, i {
-	font-style: italic;
-}
-
 //header
 header {
 	position: relative;
