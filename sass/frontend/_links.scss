@@ -1,5 +1,5 @@
 .link {
-	display: block;
+	display: inline-block;
 	@include Nudista--bold;
 	font-size: rem(12);
 	color: $darkGrey;
@@ -28,7 +28,7 @@
 	}
 }
 
-.module a {
+.module p a {
 	color: $darkGrey;
 
 	&:hover {

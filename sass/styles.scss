@@ -28,8 +28,15 @@ header {
 	color: $black;
 
 	h1 {
+		@include Nudista--bold;
 		text-align: center;
+		font-size: 9vw;
+		text-transform: uppercase;
 		padding: 3.5rem 0;
+
+		@include respond(740px) {
+			font-size: rem(60);
+		}
 
 		span {
 			@include Nudista;
