@@ -1,0 +1,93 @@
+.icon {
+	display: inline-block;
+	font-size: rem(10);
+	line-height: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	padding: rem(15);
+	vertical-align: middle;
+
+	&:before {
+		display: block;
+		font-family: "Icons";
+		font-size: rem(40);
+		line-height: .85;
+		padding-bottom: rem(15);
+	}
+}
+
+.icon--oneLayerProtect:before {
+	content: "\e61a";
+}
+
+.icon--twoLayerProtect:before {
+	content: "\e619";
+}
+
+.icon--threeLayerProtect:before {
+	content: "\e618";
+}
+
+.icon--fourLayerProtect:before {
+	content: "\e617";
+}
+
+.icon--attachableLanyard:before {
+	content: "\e626";
+}
+
+.icon--award:before {
+	content: "\e606";
+}
+
+.icon--crushProof:before {
+	content: "\e623";
+}
+
+.icon--twoLayerProtect:before {
+	content: "\e619";
+}
+
+.icon--dropDustShock:before {
+	content: "\e622";
+}
+
+.icon--easyOnOff:before {
+	content: "\e621";
+}
+
+.icon--holster:before {
+	content: "\e600";
+}
+
+.icon--noSmudge:before {
+	content: "\e640";
+}
+
+.icon--privacy:before {
+	content: "\f023";
+}
+
+.icon--screenProtector:before {
+	content: "\e639";
+}
+
+.icon--shockProof:before {
+	content: "\e60a";
+}
+
+.icon--vibrant:before {
+	content: "\e63d";
+}
+
+.icon--walletDrawer:before {
+	content: "\e604";
+}
+
+.icon--waterProof:before {
+	content: "\e602";
+}
+
+.icon--threeSixty:before {
+	content: "\e62c";
+}

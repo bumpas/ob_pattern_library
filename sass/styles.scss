@@ -65,5 +65,11 @@ header {
 	padding: 0;
 }
 
+
+//icons section
+.icons ul li {
+	display: inline-block;
+}
+
 @import "sections/colors";
 @import "sections/buttons";
