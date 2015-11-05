@@ -11,7 +11,7 @@ var timestampFormat = "X dddd, MMMM Do YYYY, h:mm:ss a ZZ";
 
 var src = {
 	sass: 'sass/**/*.scss',
-	//svg: 'svg-sprites/svgs/**/*.svg',
+	svg: 'svg-sprites/svgs/**/*.svg',
 	js: [
 		'js/plugins/svg-polyfill.js',
 		'js/plugins/svg4everybody.js',
@@ -106,19 +106,19 @@ gulp.task('js', function(){
 });
 
 // Combine and Minify SVGs
-// gulp.task('svg', function(){
+gulp.task('svg', function(){
 
-// 	return gulp.src(src.svg)
-// 		.pipe($.svgmin({
-// 			plugins: [{
-// 				cleanupIDs: false
-// 			}]
-// 		}))
-// 		.pipe($.svgstore())
-// 		.pipe($.rename('sprites.svg'))
-// 		.pipe(gulp.dest('images'))
-// 		.pipe($.browserSync.reload({stream: true}));
-// });
+	return gulp.src(src.svg)
+		.pipe($.svgmin({
+			plugins: [{
+				cleanupIDs: false
+			}]
+		}))
+		.pipe($.svgstore())
+		.pipe($.rename('sprites.svg'))
+		.pipe(gulp.dest('images'))
+		.pipe($.browserSync.reload({stream: true}));
+});
 
 // Output to build directory
 gulp.task('build', function(){
@@ -183,8 +183,7 @@ gulp.task('html', function(){
 });
 
 // Browser Sync serve task
-//gulp.task('serve', ['sass', 'svg', 'js', 'html'], function(){
-gulp.task('serve', ['sass', 'js', 'html'], function(){
+gulp.task('serve', ['sass', 'svg', 'js', 'html'], function(){
 
 	$.browserSync.init({
 		server: "./"
